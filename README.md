@@ -57,7 +57,7 @@ if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
 ```
 
-This script defines a Flask API that performs addition, subtraction, multiplication, and division based on incoming POST requests.
+This script defines a python backend that performs addition, subtraction, multiplication, and division based on incoming POST requests.
 
 ## Set Up Docker for the Python API
 
@@ -144,7 +144,7 @@ docker run -p 5000:5000 calculator-frontend
 
 ### Explanation:
 - `docker run`: This command runs the Docker container.
-- `-p 5000:5000`: This maps port `5000` on your machine to port `5000` in the container, allowing you to access the Flask API.
+- `-p 5000:5000`: This maps port `5000` on your machine to port `5000` in the container, allowing you to access the calculator backend.
 - `calculator-frontend`: The name of the Docker image to run.
 
 ## Test the Calculator API
