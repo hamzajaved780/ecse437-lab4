@@ -167,7 +167,7 @@ Create the React app by running (make sure you have Node.js installed for this s
 npx create-react-app frontend
 ```
 
-Navigate to the `calculator-frontend` directory and update the `src/App.js` file with the following content:
+Navigate to the `frontend` directory and update the `src/App.js` file with the following content:
 
 ```javascript
 import React, { useState } from 'react';
@@ -220,7 +220,7 @@ export default App;
 ## Dockerize the React Front-End
 
 ### Step 8: Create a Dockerfile for the Frontend
-Create a Dockerfile inside the `calculator-frontend` directory with the following content:
+Create a Dockerfile inside the `frontend` directory with the following content:
 
 ```dockerfile
 # Use the official Node.js image as the base image for building the app
@@ -275,18 +275,29 @@ CMD ["nginx", "-g", "daemon off;"]
    - `EXPOSE 80`: Exposes port `80`.
    - `CMD ["nginx", "-g", "daemon off;"]`: Runs Nginx.
 
-## Build the Docker Image for the React Front-End
+## Build and Test the Docker Image for the React Front-End
 
 ### Step 9: Build the Docker Image
-Navigate to the `calculator-frontend` directory in your terminal and build the Docker image:
+Navigate to the `frontend` directory in your terminal and build the Docker image:
 
 ```sh
 docker build -t react-calculator-frontend .
 ```
 
+### Step 10: Run and Test the Docker Image
+You can now test the newly built image by running it:
+
+```sh
+docker run -p 80:80 react-calculator-frontend
+```
+
+Visit `localhost:80` through your browser to test out your application.
+
+Note: Don't forget to update the `axios.post` url within your code to correctly point to the backend or the calculator won't work. 
+
 ## Deploy to Azure Web App
 
-### Step 10: Push Docker images to Azure Container Registry
+### Step 11: Push Docker images to Azure Container Registry
 
 - **Create a Student Trial Account**:
   - Go to [Azure for Students](https://azure.microsoft.com/free/students/) and sign up for a student trial account. This provides you with free credits to test and deploy your applications.
@@ -322,7 +333,7 @@ docker build -t react-calculator-frontend .
     docker push <your-registry-name>.azurecr.io/calculator-api:v1
     ```
 
-### Step 11: Deploy the App
+### Step 12: Deploy the App
 
 To deploy our app, we need to create a Web App using the production dockerfile.
 
