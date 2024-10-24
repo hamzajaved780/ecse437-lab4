@@ -3,7 +3,7 @@
 
 
 **_ECSE 437- Software Delivery_**\
-**_Due:_** **_Oct. 24th, 2024_**
+**_Due:_** **_Nov. 07th, 2024_**
 
 ## Objectives
 
