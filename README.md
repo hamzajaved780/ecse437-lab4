@@ -291,7 +291,9 @@ You can now test the newly built image by running it:
 docker run -p 80:80 react-calculator-frontend
 ```
 
-Visit `localhost:80` through your browser to test out your application.
+Visit `localhost:80` through your browser to test out your application. If everything worked correctly, here's what you'll see:
+
+  ![alt text](/images/calculator-in-browser.png)
 
 Note: Don't forget to update the `axios.post` url within your code to correctly point to the backend or the calculator won't work. 
 
