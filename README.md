@@ -337,7 +337,7 @@ Note: Don't forget to update the `axios.post` url within your code to correctly 
   - Note: If you are building your containers on macOS, you want to rebuid them for a linux environment before pusing them to the container registry.
 
     ```sh
-    docker build --platform=linux/amd64 -t  calculator-frontend .
+    docker build --platform=linux/amd64 -t calculator-frontend .
     ```
 
 ### Step 12: Deploy the App
