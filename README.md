@@ -331,7 +331,7 @@ Note: Don't forget to update the `axios.post` url within your code to correctly 
   - Push your Docker image to the registry using the following commands:
 
     ```sh
-    docker tag calculator-api <your-registry-name>.azurecr.io/calculator-api:v1
+    docker tag calculator-frontend <your-registry-name>.azurecr.io/calculator-api:v1
     docker push <your-registry-name>.azurecr.io/calculator-api:v1
     ```
   - Note: If you are building your containers on macOS, you want to rebuid them for a linux environment before pusing them to the container registry.
