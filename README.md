@@ -293,7 +293,7 @@ docker run -p 80:80 react-calculator-frontend
 
 Visit `localhost:80` through your browser to test out your application. If everything worked correctly, here's what you'll see:
 
-  ![alt text](/images/calculator-in-browser.png)
+  ![alt text](/images/calculator-in-browser.png?)
 
 Note: Don't forget to update the `axios.post` url within your code to correctly point to the backend or the calculator won't work. 
 
@@ -307,26 +307,26 @@ Note: Don't forget to update the `axios.post` url within your code to correctly 
 - **Deploy Calculator backend**:
   - Go to [Azure Portal](https://portal.azure.com/#home).
   
-  ![alt text](/images/add.png)
+  ![alt text](/images/add.png?)
 
   - Then use the plus sign to create a resource and search for: Azure Container Registry
   
-  ![alt text](/images/container-registry.png)
+  ![alt text](/images/container-registry.png?)
 
   - Pick a name for the registry name, use the default values for the rest and create the container registry.
   
-  ![alt text](/images/create-registry.png)
+  ![alt text](/images/create-registry.png?)
 
   - Then click on “go to resource” and then use “Access Keys” to login to the registry:
   
-  ![alt text](/images/registry-overview.png)
+  ![alt text](/images/registry-overview.png?)
 
   - To login to the registry, you can use the script below:
     
     ```sh
     docker login <your-registry-name>.azurecr.io -u <user> -p <password>
     ```
-    ![alt text](/images/registry-access-keys.png)
+    ![alt text](/images/registry-access-keys.png?)
   
   - Push your Docker image to the registry using the following commands:
 
@@ -348,17 +348,17 @@ To deploy our app, we need to create a Web App using the production dockerfile.
 
   - First go to this address: [Azure Portal](https://portal.azure.com/#home)
   
-  ![alt text](/images/add.png)
+  ![alt text](/images/add.png?)
   - Then use the plus sign to create a resource and search for: Web App
   
-  ![alt text](/images/web-app.png)
+  ![alt text](/images/web-app.png?)
   - Use the option “Web App for Containers” and create one.
   
-  ![alt text](/images/create-webapp-1.png)
+  ![alt text](/images/create-webapp-1.png?)
 
   - Set the **PORT** environment variable to `5000` in the Azure Web App configuration. This step is crucial to ensure that Azure routes traffic correctly to your backend.
   
-  ![alt text](/images/web-app-environment-variables.png)
+  ![alt text](/images/web-app-environment-variables.png?)
 
 
 ## Verify Deployment
